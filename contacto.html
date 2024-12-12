@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contacto</title>
+
+    <link rel="stylesheet" href="estilos3.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img  src="/imagenes  html/LOGO AUTO SPORT.jpg" alt="">
+            <h2 class="nombre empresa"> CONTACTO FORMULARIO</h2>
+        </div>
+        <nav>
+            <a href="index.html" class="nav-link"> inicio</a>
+            <a href="historia.html" class="nav-link">historia</a>
+            <a href="contacto.html" class="nav-link">contacto</a>
+        </nav>
+    </header>
+</body>
+
+<body> 
+    <div class="contact-container">
+        <h1>Formulario de Contacto</h1>
+        <form class="contact-form" onsubmit="return validateForm(event)">
+            <div class="form-group">
+                <label for="nombre">Nombre Completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required
+                    pattern="[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,}"
+                    title="El nombre debe tener al menos 3 letras y solo contener caracteres alfabéticos.">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@dominio.com" required
+                    title="Por favor, introduce un correo válido.">
+            </div>
+
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="Tu teléfono" required pattern="\d{10}"
+                    title="El número de teléfono debe tener exactamente 10 dígitos.">
+            </div>
+
+            <div class="form-group">
+                <label for="genero">Ciudad</label>
+                <select id="ciudad" name="ciudad" required>
+                    <option value="">Selecciona tu ciudad</option>
+                    <option value="Medellin">Medellin</option>
+                    <option value="Bogota">Bogota</option>
+                    <option value="Cali">Cali</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí..." rows="4" required
+                    minlength="10" title="El mensaje debe tener al menos 10 caracteres."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Enviar</button>
+        </form>
+    </div>
+    <script>
+        function validateForm(event) {
+            const nombre = document.getElementById('nombre');
+            const email = document.getElementById('email');
+            const telefono = document.getElementById('telefono');
+            const ciudad = document.getElementById('ciudad');
+            const mensaje = document.getElementById('mensaje');
+
+            // Validaciones adicionales con JavaScript
+            if (nombre.value.length < 3) {
+                alert("El nombre debe tener al menos 3 caracteres.");
+                nombre.focus();
+                return false;
+            }
+
+            if (!/^\d{10}$/.test(telefono.value)) {
+                alert("El teléfono debe tener exactamente 10 dígitos.");
+                telefono.focus();
+                return false;
+            }
+
+            if (mensaje.value.length < 10) {
+                alert("El mensaje debe tener al menos 10 caracteres.");
+                mensaje.focus();
+                return false;
+            }
+            // si todo esta correcto, registrar datos en consola 
+            console.log({
+                nombre,
+                email,
+                telefono,
+                ciudad,
+                mensaje,
+            });
+            alert("Formulario enviado correctamente. ");
+            return true;// Permitir el envío si pasa todas las validaciones
+        }
+    </script>
+
+</body>
+   
+
+  
+</body>
+</html>

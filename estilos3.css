@@ -1,0 +1,197 @@
+
+body{
+    font:small-caption;
+    margin: 0%;                    /*color fondo*/
+    background-color: rgba(107, 164, 168, 0.301);
+}
+
+a{
+    text-decoration: none;  /*el color de inicio contacto etc*/
+    color: aliceblue;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    background-color: rgba(29, 29, 31, 0.329);
+    padding: 20px;
+    align-items: center;
+}
+.logo{
+    display: flex;
+}
+ 
+.logo img{
+    height: 75px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border-radius: 70%
+}
+nav a{
+    font-weight: 600;    
+    padding-right: 10px;
+}
+nav a:hover{
+    color: chartreuse;   /*color inicio historia contacto*/
+}
+ 
+#lista1{
+    justify-content: space-between;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.contenedor-header {
+    width: 100%;
+    font-size: 30px;
+    position: fixed;
+    border-bottom: 1px solid #2f283e;
+    background-color: rgba(0,0,0,.7);
+    z-index: 99;
+    padding: 0 20px;
+}
+
+.contenedor-header header {
+    max-width: 1700px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    color: #fff;
+}
+.contenedor-header header nav a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    padding: 5px;
+    text-transform: uppercase;
+}
+
+.contenedor-header header nav a:hover {
+    color: #ff1133;
+}
+
+
+
+.contact-container {
+    background-color: #e2e0e0;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    margin-left: 650px;
+    margin-top: 100px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block;
+    color: #333;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], textarea {
+    background-color: #f9f9f9;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, input[type="tel"]:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button.submit-btn {
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+button.submit-btn:focus {
+    outline: none;
+}
+.horizontal-list {
+    list-style-type: none;
+    display: flex;
+    gap: 100px;
+    /* Espaciado entre los botones */
+    padding: 20px;
+    /* Espacio interno entre uno y otro*/
+    margin: 10px;
+    position: absolute;
+    /* Para que se quede fijo*/
+    top: 20px;
+    /* Ubicación desde la parte superior */
+    left: 2%;
+    /* Ubicación desde la parte izquierda */
+}
+
+.horizontal-list li {
+    padding: 10px 50px;
+    /* Espaciado interno del botón */
+    background-color: rgb(235, 235, 173);
+    /* Color de fondo del botón */
+    color: white;
+    /* Color del texto */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    text-align: center;
+    /* para ajustar el texto */
+    cursor: pointer;
+    /* Cursor en forma de mano */
+    font-size: 30px;
+    /* Tamaño de fuente */
+}
+
+.horizontal-list li:hover {
+    background-color: #838383;
+    /* Cambio de color al pasar el cursor */
+}
